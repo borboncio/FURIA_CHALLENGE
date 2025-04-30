@@ -1,4 +1,4 @@
-import requestspi
+import requests
 
 BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAACxU0wEAAAAA0tCmEFGM135qL%2FEI8JQSIKZsCTI%3D8switvpFR1puMOxNBPK9VDhEBe2QrI4k3hemTZ0xgkqwu7RTUF'  # Substitua pelo seu token real
 
@@ -8,7 +8,8 @@ headers = {
 }
 
 # Exemplo de endpoint para buscar tweets
-url = "https://api.twitter.com/2/tweets/search/recent?query=FURIA"
+url = "https://api.twitter.com/2/tweets/search/recent?query=FURIA&max_results=10"
+
 
 response = requests.get(url, headers=headers)
 
